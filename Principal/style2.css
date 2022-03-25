@@ -1,0 +1,37 @@
+
+
+
+#caja {
+    width: 50%;
+    margin: auto;
+  }
+  
+#rotulo {
+    padding: 3em;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 6vh;
+    background: -webkit-gradient(linear, left top, right top, from(#A24BE7), color-stop(#2C68A6), color-stop(#7FB029), color-stop(#D2C31E), to(#D92732));
+    background: linear-gradient(to right, #A24BE7, #2C68A6, #7FB029, #D2C31E, #D92732);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 8vh;
+  }
+  
+  #comentario {
+    padding: 5em;
+    background-color: #313131;
+    border-radius: 15px;
+    width: 75%;
+    margin: auto;
+    color: #FDFFEF;
+    size: 3em;
+  }
+  
+  #comentario p {
+    background-color: #313131;
+    font-size: 1.5em;
+  }

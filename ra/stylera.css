@@ -1,0 +1,38 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+}
+
+
+H1{
+    padding: 1em;
+    text-align: center;
+}
+
+body{
+    overflow: hidden;
+}
+
+#visor
+{
+    /*position:fixed;*/
+    margin: auto;
+    
+    /*top:0;left:0;right:0;bottom:0;*/  
+    width:80%;
+    height:50vh;
+    z-index:999;
+    display:block;
+    border:none;
+
+}
+
+#cabeceraLogo{
+    width:10%;
+    margin-left: 10%;
+    margin-bottom: 15vh;
+}
