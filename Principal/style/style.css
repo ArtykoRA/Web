@@ -152,9 +152,9 @@ footer a:hover {
   -webkit-background-clip: text;
   color: transparent;
   border-bottom: 8px solid;
-  -o-border-image: linear-gradient(to right, #A24BE7, #2C68A6, #7FB029, #D2C31E, #D92732) 1;
-     border-image: -webkit-gradient(linear, left top, right top, from(#A24BE7), color-stop(#2C68A6), color-stop(#7FB029), color-stop(#D2C31E), to(#D92732)) 1;
-     border-image: linear-gradient(to right, #A24BE7, #2C68A6, #7FB029, #D2C31E, #D92732) 1;
+  -o-border-image: linear-gradient(to right, #A24BE7, #2C68A6, #7FB029, #D2C31E, #D92732);
+     border-image: -webkit-gradient(linear, left top, right top, from(#A24BE7), color-stop(#2C68A6), color-stop(#7FB029), color-stop(#D2C31E), to(#D92732));
+     border-image: linear-gradient(to right, #A24BE7, #2C68A6, #7FB029, #D2C31E, #D92732);
 }
 
 .pie {

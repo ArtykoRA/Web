@@ -8,7 +8,7 @@ $color-gris: #6D6D6D;
 $color-fondo:rgb(7,16,47);
 
 
-
+h1{ background-color: $color-gris; color:#2C68A6; padding: 1em;}
 
 *{
     margin:0;
@@ -27,7 +27,7 @@ $color-fondo:rgb(7,16,47);
 }
 #BarraArriba{
     display:flex;
-    
+    z-index: 9;
 }
 #cabeceraLogo{
     width:10%;
@@ -78,7 +78,7 @@ $color-fondo:rgb(7,16,47);
   .topnav{
       margin-right: 0.2em;
       a{
-          font-size: 0.5em;
+          font-size: 0.7em;
        }
     }
     #Espectaculos{
@@ -119,6 +119,9 @@ $color-fondo:rgb(7,16,47);
 
 }
 
+
+
+
 #Texto1{
     background-color:  #050529;
     width:80%;
@@ -132,6 +135,7 @@ $color-fondo:rgb(7,16,47);
     font-size: 6em;
     font-style: oblique;
     font-family: 'Roboto';
+    font-weight: 600;
 }
 
 #intro{
@@ -185,8 +189,7 @@ $color-fondo:rgb(7,16,47);
 /*aquí las fotos con otra pag estilo*/
 
 #Espectaculos{
-    background-color: $color-azul;
-    color:#050529;
+   
 
     width: 80%;
     margin-top: 300px;
@@ -200,15 +203,21 @@ $color-fondo:rgb(7,16,47);
     padding-right: 4em;
 
         H1{
-            background-color: #7FB029;
+           // background-color: #7FB029;
             margin-bottom: 2em;
-            
+            color:$color-azul; 
+            padding-left: 17%;
+            font-weight: 800;
         }
 
         p{
-            background-color: #A24BE7;
+            //background-color: #A24BE7;
             margin-top: 3em;
-            color: pink;
+            padding-left: 1em;
+           // color: pink;
+           background-color: $color-azul;
+           color:#050529;
+           
         }      
     
 }
@@ -283,6 +292,20 @@ footer{
     border-radius: 3vh 3vh 0vh 0vh;
     
 }
+#iconospadre {
+    background-color: $color-oscuro;
+    width: 70%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  
+#iconospadre #iconosredes {
+    background-color: $color-oscuro;
+}
 
 .pie{
     width: 50%;
@@ -345,4 +368,16 @@ a:hover {
     -webkit-background-clip: text;
     color: transparent;  
 
+}
+
+//nuevo para iconoluz opacidad;
+
+#IconoLuz{
+    animation: opacidad 4s infinite;
+}
+//nuevo para iconoluz opacidad;
+@keyframes opacidad {
+    0%{opacity :1;}
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
 }

@@ -1,4 +1,10 @@
 @charset "UTF-8";
+h1 {
+  background-color: #6D6D6D;
+  color: #2C68A6;
+  padding: 1em;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +25,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 9;
 }
 
 #cabeceraLogo {
@@ -74,7 +81,7 @@
     margin-right: 0.2em;
   }
   .topnav a {
-    font-size: 0.5em;
+    font-size: 0.7em;
   }
   #Espectaculos {
     margin-right: 2%;
@@ -118,6 +125,7 @@
   font-size: 6em;
   font-style: oblique;
   font-family: 'Roboto';
+  font-weight: 600;
 }
 
 #intro {
@@ -154,8 +162,6 @@
 
 /*aquí las fotos con otra pag estilo*/
 #Espectaculos {
-  background-color: #2C68A6;
-  color: #050529;
   width: 80%;
   margin-top: 300px;
   margin-left: 8%;
@@ -168,14 +174,17 @@
 }
 
 #Espectaculos H1 {
-  background-color: #7FB029;
   margin-bottom: 2em;
+  color: #2C68A6;
+  padding-left: 17%;
+  font-weight: 800;
 }
 
 #Espectaculos p {
-  background-color: #A24BE7;
   margin-top: 3em;
-  color: pink;
+  padding-left: 1em;
+  background-color: #2C68A6;
+  color: #050529;
 }
 
 /*  formulario de contacto   */
@@ -269,6 +278,21 @@ footer {
   border-radius: 3vh 3vh 0vh 0vh;
 }
 
+#iconospadre {
+  background-color: #343434;
+  width: 70%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+#iconospadre #iconosredes {
+  background-color: #343434;
+}
+
 .pie {
   width: 50%;
   height: 15vh;
@@ -338,5 +362,34 @@ a:hover {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+#IconoLuz {
+  -webkit-animation: opacidad 4s infinite;
+          animation: opacidad 4s infinite;
+}
+
+@-webkit-keyframes opacidad {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacidad {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=styleLuzYFuego.css.map */

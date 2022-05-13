@@ -47,6 +47,16 @@
           animation: izq-der3 5s   infinite;
 }
 
+#Primer_plano {
+  -webkit-animation: escalar 3s infinite ease-in-out;
+          animation: escalar 3s infinite ease-in-out;
+}
+
+#IconoLuz :hover {
+  -webkit-animation: escalar 1s ease-in;
+          animation: escalar 1s ease-in;
+}
+
 #Corona {
   -webkit-animation-delay: 5s;
   animation-delay: 5s;
@@ -59,28 +69,30 @@
   animation: giro 2s   ease-in;
 }
 
-#Circulo {
+#CirculoLuz {
   -webkit-animation: giro 2s   ease-in;
           animation: giro 2s   ease-in;
 }
 
 #Icono360:hover {
-  border-radius: 0%;
-}
-
-#Icono360:hover #huevo {
-  -webkit-animation: izq-der 2s   ease-in;
-  animation: izq-der 2s   ease-in;
-}
-
-#Icono360:hover #circulo {
-  -webkit-animation: izq-der1 2s   ease-in;
-  animation: izq-der1 2s   ease-in;
-}
-
-#Icono360:hover #ovalo {
-  -webkit-animation: up-anim  2s  ease-in;
-  animation: up-anim  2s  ease-in;
+  -webkit-animation: escalar 3s ease-in;
+          animation: escalar 3s ease-in;
+  /*
+    #huevo {
+      -webkit-animation: izq-der 2s   ease-in;
+              animation: izq-der 2s   ease-in;
+    }
+  
+    
+    #circulo {
+      -webkit-animation: izq-der1 2s   ease-in;
+              animation: izq-der1 2s   ease-in;
+    }
+  
+    #ovalo {
+      -webkit-animation: up-anim  2s  ease-in;
+              animation: up-anim  2s  ease-in;
+    }*/
 }
 
 #cerito {
@@ -278,23 +290,61 @@
 
 @-webkit-keyframes giro {
   from {
-    -webkit-transform: rotate 0deg;
-            transform: rotate 0deg;
+    -webkit-transform: rotate 0.1turn;
+            transform: rotate 0.1turn;
   }
   to {
-    -webkit-transform: rotate 359deg;
-            transform: rotate 359deg;
+    -webkit-transform: rotate 0.9turn;
+            transform: rotate 0.9turn;
   }
 }
 
 @keyframes giro {
   from {
-    -webkit-transform: rotate 0deg;
-            transform: rotate 0deg;
+    -webkit-transform: rotate 0.1turn;
+            transform: rotate 0.1turn;
   }
   to {
-    -webkit-transform: rotate 359deg;
-            transform: rotate 359deg;
+    -webkit-transform: rotate 0.9turn;
+            transform: rotate 0.9turn;
+  }
+}
+
+@-webkit-keyframes escalar {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  33% {
+    -webkit-transform: scale(1.05) translate(-6px, -6px);
+            transform: scale(1.05) translate(-6px, -6px);
+  }
+  66% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: 0.995;
+            transform: 0.995;
+  }
+}
+
+@keyframes escalar {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  33% {
+    -webkit-transform: scale(1.05) translate(-6px, -6px);
+            transform: scale(1.05) translate(-6px, -6px);
+  }
+  66% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: 0.995;
+            transform: 0.995;
   }
 }
 /*# sourceMappingURL=styleAnimaciones.css.map */

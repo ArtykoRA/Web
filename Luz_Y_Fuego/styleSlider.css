@@ -5,8 +5,8 @@
  
   /* Position the image container (needed to position the left and right arrows) */
   .container {
-    width: 10%;    /*mio*/
-    margin: auto;  /*mio*/
+    /*width: 10%;    /*mio*/
+    /*margin: auto;  /*mio*/
     position: relative;
   }
 
