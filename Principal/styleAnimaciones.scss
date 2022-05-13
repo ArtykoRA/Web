@@ -1,27 +1,117 @@
+//nuevo en logo principal
+#coronaA{
+  -webkit-animation: down-anim 2s   ease-in;
+  animation: down-anim 2s   ease-in;
+}
 
-#v {
-    -webkit-animation: izq-der 2s   ease-in;
-            animation: izq-der 2s   ease-in;
+#coronaR{
+  -webkit-animation: up-anim  2s  ease-in;
+  animation: up-anim  2s  ease-in;
+}
+
+#coronaT{
+  -webkit-animation: down-anim 2s   ease-in;
+  animation: down-anim 2s   ease-in;
+}
+
+#coronaY{
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  -webkit-animation: up-anim 6s   ease-in;
+    animation: up-anim 6s   ease-in;
+  
+}
+
+#coronaK{
+  -webkit-animation: down-anim 2s   ease-in;
+  animation: down-anim 2s   ease-in;
+}
+#coronaO{
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  -webkit-animation: izq-der1 3s;
+  animation: izq-der1 3s ;
+}
+
+//nuevo en ar
+
+#romboarriba{
+
+  animation: up-down   5s infinite;
+}
+#romnboizquierda{
+  animation: izq-der2 5s infinite;
+}
+
+#romboderecha{
+  animation: izq-der3 5s   infinite;
+}
+
+
+//nuevo en icono luzyfuego
+
+#Corona{
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation: down-anim 2s   ease-in;
+  animation: down-anim 2s   ease-in;
+ 
+
+  :hover{  // no funciona
+    -webkit-animation: up-anim 2s   ease-in;
+    animation: giro 2s   ease-in;
+    
+
+  }
+}
+
+#Circulo{
+  animation: giro 2s   ease-in;
+
+
+}
+
+
+//nuevo  en icono 360
+#Icono360:hover{
+  border-radius: 0%;
+    #huevo {
+      -webkit-animation: izq-der 2s   ease-in;
+              animation: izq-der 2s   ease-in;
+    }
+  
+    
+    #circulo {
+      -webkit-animation: izq-der1 2s   ease-in;
+              animation: izq-der1 2s   ease-in;
+    }
+  
+    #ovalo {
+      -webkit-animation: up-anim  2s  ease-in;
+              animation: up-anim  2s  ease-in;
+    }
   }
   
-  @-webkit-keyframes izq-der {
-    0% {
-      -webkit-transform: translateX(-50px);
-              transform: translateX(-50px);
-    }
-    100% {
-      -webkit-transform: translateX(0px);
-              transform: translateX(0px);
-    }
-  }
-
-
-  #huevo {
+  
+  #cerito {
+    transition-delay: 3s;
     -webkit-animation: izq-der 2s   ease-in;
-            animation: izq-der 2s   ease-in;
+    animation: izq-der 2s   ease-in;
   }
   
-  @-webkit-keyframes izq-der {
+  
+  
+  #ceritocerito {
+    animation-direction: reverse;//no hace nada
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    -webkit-animation: izq-der 2s   ease-in;
+    animation: izq-der 2s   ease-in;
+  }
+// las animaciones:
+
+
+@keyframes izq-der {
     from {
       -webkit-transform: translateX(-50px);
               transform: translateX(-50px);
@@ -30,15 +120,11 @@
       -webkit-transform: translateX(0px);
               transform: translateX(0px);
     }
-  }
+}
 
 
-  #circulo {
-    -webkit-animation: izq-der1 2s   ease-in;
-            animation: izq-der1 2s   ease-in;
-  }
   
-  @-webkit-keyframes izq-der1 {
+@keyframes izq-der1 {   //derecha izquierda 
     from {
       -webkit-transform: translateX(+50px);
               transform: translateX(+50px);
@@ -47,15 +133,51 @@
       -webkit-transform: translateX(0px);
               transform: translateX(0px);
     }
-  }
+}
 
+@keyframes izq-der2
+{
+  0%{
 
-  #ovalo {
-    -webkit-animation: up-anim  2s  ease-in;
-            animation: up-anim  2s  ease-in;
-  }
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+   }
+ 
+   50%{
+ 
+     -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+   }
+ 
+  100%{
+ 
+   -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    }
+}
+@keyframes izq-der3
+{
+  0%{
+
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+   }
+ 
+   50%{
+ 
+     -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+   }
+ 
+  100%{
+ 
+   -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    }
+}
   
-  @-webkit-keyframes up-anim {
+  
+@keyframes up-anim {
     from {
       -webkit-transform: translateY(50px);
               transform: translateY(50px);
@@ -64,4 +186,45 @@
       -webkit-transform: translateY(0px);
               transform: translateY(0px);
     }
+}
+
+@keyframes down-anim {
+    from {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+    }
+    to {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+}
+
+@keyframes up-down {
+   
+  0%{
+
+   -webkit-transform: translateY(0px);
+   transform: translateY(0px);
   }
+
+  50%{
+
+    -webkit-transform: translateY(-3px);
+   transform: translateY(-3px);
+  }
+
+ 100%{
+  -webkit-transform: translateY(0px);
+   transform: translateY(0px);
+   }
+
+}
+
+@keyframes giro
+{
+  from{transform: rotate (0deg);}
+ 
+  to{
+   transform:  rotate (359deg);
+  }
+}

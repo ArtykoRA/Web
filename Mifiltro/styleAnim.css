@@ -1,0 +1,16 @@
+#F {
+  -webkit-animation: izq-der 2s   ease-in;
+  animation: izq-der 2s   ease-in;
+}
+
+@-webkit-keyframes izq-der {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+/*# sourceMappingURL=styleAnim.css.map */
