@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paseo por las salinas de San Juan, en Saelices de la Sal.</title>
+
+  <script src="../recursosComunes/aframe.min.js"></script>
+  <script src="salinas.js"></script>
+
+  </head>
+<body>
+    
+  <a-scene  cursor="rayOrigin: mouse" raycaster="objects: .clickable"  vr-mode-ui="false">
+    
+    <a-entity light="type: ambient; color: #BBB"></a-entity>
+    <a href="salinasmosaico.html" style="position:absolute; bottom:15Px; left:15px; 
+    z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Galería</a>
+    <a href="../index.html" style="position:absolute;top:40Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Índice principal</a>
+
+      <!-- Parte de las salinas hacia la noria -->
+    <a-sky id="sky1" class="not-clickable" src="assets/1_CartelCarretera.jpg" rotation="0 -90 0" visible="true" >
+      <a-sphere id="b1" class="clickable" color="green" position="43.06207 0.50022 -15.522" opacity="0.8" radius="1.5" click-listener2></a-sphere>
+      <a-sphere id="b1b" class="clickable" color="green" position="-24.12148 1.7 9.3" radius="1.5" click-listener8></a-sphere>
+    </a-sky>
+    <a-sky id="sky2" class="not-clickable" src="assets/4_ComienzoCalles.jpg" rotation="0 -90 0" visible="false" >
+        <a-sphere id="b2" class="not-clickable" color="white" position="-18.59739 3.09302 2.47058" opacity="0.8" radius="1.5" click-listener21></a-sphere>
+        <a-sphere id="b2b" class="not-clickable" color="green" position="46.16502 2.79352 -2.818513" radius="1.5" click-listener3></a-sphere>
+    </a-sky>
+    <a-sky id="sky3" class="not-clickable" src="assets/6_CallezCruce.jpg" rotation="0 -90 0" visible="false" >
+        <a-sphere id="b3" class="not-clickable" color="white" position="-49.84306 0.44554 0.95444" opacity="0.8" radius="2" click-listener32></a-sphere>
+        <a-sphere id="b3b" class="not-clickable" color="green" position="13.05981 1.59624 -11.50119" radius="0.8" click-listener4></a-sphere>
+    </a-sky>
+    <a-sky id="sky4" class="not-clickable" src="assets/10_Calles5.jpg" rotation="0 -90 0" visible="false" >
+        <a-sphere id="b4" class="not-clickable" color="white" position="-49.84306 0.44554 26.72052" opacity="0.8" radius="1.5" click-listener43></a-sphere>
+        <a-sphere id="b4b" class="not-clickable" color="green" position="46.16502 3.56671 -14.89537" radius="1.5" click-listener5></a-sphere>
+    </a-sky>
+
+    <a-sky id="sky5" class="not-clickable" src="assets/12_Alberca.jpg" rotation="0 -110 0" visible="false" >
+        <a-sphere id="b5" class="not-clickable" color="white" position="-44.73822 0.44554 -13.07098" opacity="0.8" radius="1.5" click-listener54></a-sphere>
+        <a-sphere id="b5b" class="not-clickable" color="green" position="63.64527 2.79352 31.64509" radius="1.5" click-listener6></a-sphere>        
+    </a-sky>
+ 
+    <a-sky id="sky6" class="not-clickable" src="assets/16_DentroRueda.jpg" rotation="0 110 0" visible="false" >
+        <a-sphere id="b6" class="not-clickable" color="white" position="8.67164 -0.41492 2.72519" opacity="0.8"   click-listener65></a-sphere>
+        <a-sphere id="b6b" class="not-clickable" color="green" position="-20 0.8 0.95444" opacity="0.8"  click-listener7></a-sphere>
+    </a-sky>
+
+    <a-sky id="sky7"class="not-clickable"  src="assets/18_DentroRueda3.jpg" rotation="0 -90 0" visible="false" >
+        <a-sphere id="b7" class="not-clickable" color="white" position="20 1 -9" radius="1 " opacity="0.8" click-listener76></a-sphere>
+    </a-sky>
+
+    <!-- Parte de los edificios  -->
+
+    <a-sky id="sky8" class="not-clickable" src="assets/20_EntradaEdificios.jpg" rotation="0 180 0" visible="false" >
+        <a-sphere id="b8" class="not-clickable" color="white" position="39.06207 1.6056 9.31975" opacity="0.8" radius="1.5" click-listener81></a-sphere>       
+        <a-box id="b88" class="not-clickable" color="green" position="-6.48121 4.52125 -39.98648" depth="4" height="4" width="4" click-listener9></a-box>
+    </a-sky>
+    <a-sky id="sky9" class="not-clickable" src="assets/24_SiloSal.jpg" rotation="0 90 0" visible="false" >
+        
+        <a-box id="b9" class="not-clickable" color="white" position="-34.81911 -0.02391 3.48328" opacity="0.8" depth="4" height="4" width="4" click-listener98></a-box>
+        <a-sphere id="b99" class="not-clickable" color="green" position="39.75919 0.24346 -8.30312" radius="1.5" click-listener10></a-sphere>        
+        <a-sphere id="b999" class="not-clickable" color="green" position="-3.56152 0.85094 -42.52223" radius="1.5" click-listener11></a-sphere>
+    </a-sky>
+    <a-sky id="sky10" class="not-clickable" src="assets/26_SiloSal2.jpg" rotation="0 -90 0" visible="false" >
+        <a-sphere id="b10" class="not-clickable" color="white" position="-10.81459 -3.80251 21.41245" opacity="0.8" radius="1.5" click-listener19></a-sphere>
+        <a-sphere id="b1010" class="not-clickable" color="green" position="-34.77317 0.49823 -21.41393" radius="1.5" click-listener11></a-sphere>
+    </a-sky>
+    <a-sky id="sky11" class="not-clickable" src="assets/28_EntradaSilo2.jpg" rotation="0 -90 0" visible="false" >
+        <a-sphere id="b11" class="not-clickable" color="white" position="33.81689 0.46245 10.30773" opacity="0.8" radius="1.5" click-listener118></a-sphere>
+        <a-sphere id="b1111"  class="not-clickable" color="white" position="10.8029 3.08703 -19.44579" radius="1.5" click-listener1110></a-sphere>
+    </a-sky>
+
+
+</a-scene>    
+
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+
+    <link rel="stylesheet" href="styleAnimacion.css">
+    <title>Pruebas de la entrada del logo del leader en capas</title>
+
+    <style>
+        #example-scanning-overlay {
+
+        }
+        #example-scanning-overlay.hidden {
+          display: none;
+        }
+        
+    </style>
+
+</head>
+<body>
+   
+   
+      <img  id="example-scanning-overlay" class="animated fadeOut" src="logo.jpg" alt="">
+      <!-- <img  id="example-scanning-overlay" class="animated2 fadeOut" src="arbol.png" alt="">
+      <img id="example-scanning-overlay"  class="animated3 fadeOut" src="rio.png" alt="">-->
+    
+
+
+
+    <a-scene mindar-image=" imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/examples/image-tracking/assets/card-example/card.mind;   "  
+     
+    vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-plane color="blue" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+      </a-entity>
+    </a-scene>
+    <p id="nombre">logo leader Molina de Aragón</p>
+</html>
+
+
+<html>
+
+
+</html>

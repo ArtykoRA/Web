@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paseo por Chequilla, recorrido en 360º</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="chequilla.js"></script>
+  
+</head>
+<body>
+
+  <a-scene  cursor="rayOrigin: mouse" vr-mode-ui="false">
+    <a-entity light="type: ambient; color: #BBB"></a-entity>
+    <a href="chequillamosaico.html" style="position:absolute; bottom:15Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Galería</a>
+    <a href="../index.html" style="position:absolute;top:40Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Índice principal</a>
+
+    <a-sky id="sky1"  src="assets/EntradaPueblo.jpg" rotation="0 130 0" visible="true" >            
+      <a-sphere  color="yellow " position="1.03152 3.06069 35.62826 " opacity="0.8" click-listener12 ></a-sphere>  
+      <a-sphere  color="red " position="-45.12318 1.25688 -1.3857" opacity="0.8" click-listener ></a-sphere>  
+    </a-sky>
+
+ 
+    <a-sky id="sky2"  src="assets/Cartel1.jpg" rotation="0 -90 0" visible="false" >            
+        <a-sphere  color="yellow " position="-7.64219 3.06069 59.3974 " opacity="0.8" click-listener1 ></a-sphere>  
+        <a-sphere  color="red " position="9.85597 4.13388 -54.93903"  radius="1.5"opacity="0.8" click-listener4 ></a-sphere> 
+        <a-sphere color="cyan " position="9.96145 3.04535 8.34678" opacity="0.8" click-listener2></a-sphere>
+    </a-sky>
+
+    <a-sky id="sky3"  src="assets/Explanada1.jpg" rotation="0 -90 0" visible="false" >            
+        <a-sphere color="red " position="-35.01743 -1.58118 28.66662" opacity="0.8" click-listener3></a-sphere>
+    </a-sky>
+    <a-sky id="sky4" src="assets/EntradaPinturas.jpg" rotation="0 -90 0" visible="false">            
+        <a-sphere color="red " position="-7.99446 3.54126 -52.68492" radius="1.5" opacity="0.8" click-listener6></a-sphere> 
+        <a-sphere color="cyan " position="22.89359 1.99313 -10.03194" opacity="0.8" click-listener5></a-sphere>
+    </a-sky>
+   
+    <a-sky id="sky5" src="assets/Frente pinturas.jpg" rotation="0 -90 0" visible="false">            
+        <a-sphere color="yellow " position="-30.92329 -0.97289 54.51211" opacity="0.8" click-listener7></a-sphere>  
+        <a-sphere color="red " position="43.37053 35.16046 -26.89632" radius="1.5" opacity="0.8" click-listener8></a-sphere> 
+        <a-sphere color="cyan " position="22.94998 5.30183 -3.25742" opacity="0.8" click-listener10></a-sphere>
+    </a-sky>
+    <a-sky id="sky6"  src="assets/Rejas.jpg" rotation="0 90 0" visible="false" >            
+        <a-sphere color="red " position="47.95434 -11.55304 5.44714" radius="1.5" opacity="0.8" click-listener11></a-sphere> 
+    </a-sky>
+    <a-sky id="sky7"  src="assets/Altillo.jpg" rotation="0 -90 0" visible="false" >            
+        <a-sphere color="red " position="42.13249 -20.18176 -32.69098" opacity="0.8" click-listener9></a-sphere>
+    </a-sky>
+ 
+
+   
+    <a-sky id="sky8" src="assets/HaciaPlazaT.jpg" rotation="0 170 0 " visible="false" >              
+        <a-sphere color="red " position="50.80939 -1.14886 -15.35255" radius="1.5" opacity="0.8" click-listener13></a-sphere> 
+        <a-sphere color="cyan " position="6.72027 5.32651 20.49892" opacity="0.8" click-listener14></a-sphere>
+    </a-sky>
+    <a-sky id="sky9" src="assets/PlazaT.jpg" rotation="0 170 0 " visible="false" >              
+        <a-sphere color="red " position="-17.24449 1.8593 -48.89698" radius="1.5" opacity="0.8" click-listener15></a-sphere> 
+        <a-sphere color="cyan " position="20.833 13.43731 -10.30021" opacity="0.8" click-listener16></a-sphere>
+    </a-sky>
+   
+    <a-sky id="sky10" src="assets/SobrePlazaT.jpg" rotation="0 170 0 " visible="false" >              
+        <a-sphere color="red " position="-4.52387 -17.18117 -51.32854" radius="1.5" opacity="0.8" click-listener17></a-sphere> 
+        <a-sphere color="cyan " position="14.83153 1.33974 33.46255" opacity="0.8" click-listener18></a-sphere>
+    </a-sky>
+    <a-sky id="sky11" src="assets/VistasCarretera.jpg" rotation="0 170 0 " visible="false" >              
+        <a-sphere color="cyan " position="53.11616 0.49507 -2.04016" opacity="0.8" click-listener19></a-sphere>
+    </a-sky>
+
+   
+</body>
+</html>

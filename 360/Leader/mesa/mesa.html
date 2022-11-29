@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fragmento del valle del Mesa en 360º</title>
+
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="mesa.js"></script>
+
+  </head>
+<body>
+    
+  <a-scene  cursor="rayOrigin: mouse" vr-mode-ui="false">
+    <a-entity light="type: ambient; color: #BBB"></a-entity>
+    <a href="mesamosaico.html" style="position:absolute; bottom:15Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Galería</a>
+    <a href="../index.html" style="position:absolute;top:40Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Índice principal</a>
+
+    <a-sky id="sky1"  src="assets/MesaUso.jpg" rotation="0 130 0" visible="true" >
+      <a-sphere  color="green" position="0.89856 16.34417 20.92948" opacity="0.8" click-listener></a-sphere>
+      <a-sphere  color="green" position="18 2 7" opacity="0.8" click-listener2></a-sphere>
+      <a-sphere  color="green" position="-34.27033 1.85544 -19.40673" radius="1.3" opacity="0.8" click-listener7></a-sphere>
+    </a-sky>
+
+    <a-sky id="sky2" src="assets/MesaArriba2.jpg" rotation="0 110 0" visible="false">
+      <a-sphere color="white" position="14.92073 -11.28954 -22.03661" click-listener1></a-sphere>
+      <a-sphere color=" green" position="33.44795 -5.32839 -4.90287"  click-listener4></a-sphere>
+    </a-sky>
+
+    <a-sky id="sky3" src="assets/MesaArriba.jpg" rotation="0 0 0" visible="false">
+        <a-sphere color="white" position="1.69704 2.38682 -18.21196"  click-listener5></a-sphere>
+        <a-sphere color=" green" position="-26 -12 8"   radius="1.3" click-listener6></a-sphere>
+    </a-sky>
+
+    <a-sky id="sky4" src="assets/MesaArboles.jpg" rotation="0 0 0" visible="false">
+        <a-sphere color="white" position="19.26738 3.02414 -21.67246" opacity="0.8" click-listener3></a-sphere>
+    </a-sky>
+
+    <a-sky id="sky5" src="assets/Nogales.jpg" rotation="0 180 0" visible="false">
+      <a-sphere color="green" position="-19.06008 7.03605 21.06547" click-listener9></a-sphere>
+      <a-sphere color="white" position="26.28058 1.82639 -20.56568" radius="1.3"  click-listener8></a-sphere>
+    </a-sky>
+
+    <a-sky id="sky6"  src="assets/Arces.jpg" rotation="0 180 0" visible="false" >
+      <a-sphere color="white" position="21.63991 -2.4711 -7.46549" opacity="0.8"   click-listener10></a-sphere>
+      <a-sphere color="green" position="-22.61822 4.0339 -2.68125" opacity="0.8"   click-listener11></a-sphere>
+    </a-sky>
+
+    <a-sky id="sky7"  src="assets/Arcelejos.jpg" rotation="0 0 0" visible="false" >
+        <a-sphere color="white" position="-13.85925 -7.58626 21.21404" opacity="0.8"  click-listener12></a-sphere>
+    </a-sky>
+
+  </a-scene>    
+
+</body>
+</html>

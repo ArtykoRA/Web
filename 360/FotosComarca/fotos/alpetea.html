@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castillo de alpetea</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <script>
+        AFRAME.registerComponent('clickhandler', {
+                schema: {
+                  txt: {default:'default'}
+                },        
+                init: function () {
+                  var data = this.data;
+                  var el = this.el;        
+                 
+                  el.addEventListener('click', function () {    
+
+                   console.log(data.txt);
+                  
+                  });        
+                }
+              });
+        </script>
+  
+</head>
+<body>
+
+
+    <a href="indexTexto.html" style="position:absolute; bottom:15Px; left:15px; z-index:2;color: rgb(48, 236, 64); background-color: white;padding: 10px; border-radius:5% ;">Volver
+    </a>
+
+    
+
+
+    <a-scene class="aframebox">
+        <a-sky src="cueva1Merged_P.jpg" rotation="0 280 -12 "></a-sky>
+
+        <a-text font="kelsonsans" value="Puy de Sancy, France" width="6"  color ="red" position="-2.59834 0.25 -1.61315" rotation="0 14.999999999999998 0" text="" visible=""></a-text>
+        <a-text font="kelsonsans" value="Puy de Sancy, France" width="6"  color ="green" position="2 2 -1.61315" rotation="12 -30 0" text="" visible=""></a-text>
+        <a-text font="kelsonsans" value="Puy de Sancy, France" width="6"  color ="blue" position="-2.59834 3 -1.61315" rotation="0 14.999999999999998 0" text="" visible=""></a-text>
+   
+   
+
+            
+            <a-image src="img1.png" clickhandler="txt:image1"></a-image>
+            <a-box clickhandler="txt:box1"></a-box>
+            <a-box clickhandler="txt:caja2"    color="red" position="-1 1 -3" depth="0.2" heigth="0.8" width=".3"></a-box>
+            
+            <a-entity cursor="rayOrigin:mouse"></a-entity>
+    
+    
+    
+   
+   
+    </a-scene> 
+   
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+   
+    <!--ejemplo gallery 360-->
+
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@4.x.x/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.jss"></script>
+    <!-- Fin ejemplo gallery 360-->
+
+    <title>IndexMinimo  Poniendo cosas</title>
+ <script>
+      /* 
+ Añadir evento "click-listener"     
+      AFRAME.registerComponent("click-listener", {
+    init: function() {
+      this.el.addEventListener("click", (e) => {        
+        //Lo que quieras hacer ;)
+      })
+    }
+  })
+*/
+
+</script>
+<script>
+  /* 
+Añadir evento "click-listener"     
+  AFRAME.registerComponent("click-listener", {
+init: function() {
+  this.el.addEventListener("click", (e) => {        
+    //Lo que quieras hacer ;)
+  })
+}
+})
+*/
+
+</script>
+<script>
+    /*Template ejemplo:
+    <script id="plane" type="text/html">
+      <a-entity class="link"
+        geometry="primitive: plane; height: 1; width: 1"
+        material="shader: flat; src: #cubes-thumb"
+        sound="on: click; src: #click-sound"></a-entity>
+       <script> */
+
+</script>
+
+
+
+
+
+
+</head>
+<body> 
+    <a-scene cursor="rayOrigin: mouse" vr-mode-ui="false" >
+
+      <script id="anillo" type="text/html">
+        <a-entity class="link"
+        geometry="primitive: ring;radius-inner: 0.08; radius-outer:0.2  "
+        material="shader: flat; color: white; opacity: 0.4"        
+        sound="on: click; src: #click-sound"
+        event-set__click="_target: #image-360; _delay: 300; material.src: ${src}"
+        event-set__click="_target: #tuno; material.color:red}"
+        >
+        
+       </a-entity>
+       </script>
+
+        <a-assets>
+      
+         
+          <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+      
+          <!-- Images. Cielos -->
+
+          <img id="alpetea"  src="/360/FotosComarca/Cielos/assets/alpetea2_P.jpg">
+          <img id="cueva1"  src="/360/FotosComarca/Cielos/assets/cueva1Merged_P.jpg">
+          <img id="lcampillo"  src="/360/FotosComarca/Cielos/assets/LCampillo_P.jpg">
+
+          <!-- Images.  -->
+        </a-assets>
+        <a-entity id="tuno" template="src:#anillo"  data-src="#alpetea" position="0 1 -2" ></a-entity>
+        <a-entity template="src:#anillo"  data-src="#cueva1" position="-2 1 -2"></a-entity>
+        <a-entity template="src:#anillo"  data-src="#lcampillo" position="3 1 -2"></a-entity>
+        <!-- 360-degree image. -->
+        
+        <a-sky
+        id="image-360" radius="10" src="#alpetea"
+        animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
+        animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade">
+        </a-sky>
+
+        <a-ring id="enlace1" color="red" radius-inner="0.001" radius-outer="1" position="0 0 -5" visible="false" opacity="0.3"></a-ring>
+        <a-ring id="enlace2" color="green" radius-inner=".6" radius-outer="1" position="0 0 -4" visible="false"></a-ring>
+        <a-ring id="enlace3" color="blue" radius-inner=".5" radius-outer="1" position="0 0 -3" visible="false"></a-ring>
+
+       
+      </a-scene>
+
+      </a-scene>
+</body>
+</html>

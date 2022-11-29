@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Seta de Villel de Mesa Etiquetada y funcionan los clicks</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+
+    <script>
+                
+      //seta          
+      AFRAME.registerComponent("click-listener1", {
+          init: function() {
+            this.el.addEventListener("click", (e) => {
+              console.log("Tocando el anillo de información ") // efectivamente funciona ok... en escritorio  y en el movil tmb.
+              const info = document.querySelector("#info1");
+              const boton = document.querySelector("#boton1");
+          
+              info.setAttribute("visible", true);
+              info.setAttribute("position", "1.6 .5 -3.3");
+    
+              boton.setAttribute("position",".9 0 -100");             
+            })
+         }
+      })
+
+      AFRAME.registerComponent("click-listener2", {
+          init: function() {
+            this.el.addEventListener("click", (e) => {
+              console.log("Tocando el botón de Cerrar") // efectivamente funciona ok... en escritorio  y en el movil tmb.
+              const info = document.querySelector("#info1");
+              const boton = document.querySelector("#boton1");
+          
+              info.setAttribute("visible", false);
+              info.setAttribute("position", "1.5 .5 -9");
+    
+              boton.setAttribute("position",".9  0 -2.3");            
+            })
+         }
+      })
+      //carretera
+      AFRAME.registerComponent("click-listener3", {
+          init: function() {
+            this.el.addEventListener("click", (e) => {
+              console.log("Tocando el triangulo") // 
+              const info = document.querySelector("#info2");  
+              const boton = document.querySelector("#boton2");
+          
+              info.setAttribute("visible", true);
+              info.setAttribute("position", "-17.6 -4.45 -7.46653");
+    
+              boton.setAttribute("position","-17.6 -05.45 -80");             
+            })
+         }
+      })
+
+      AFRAME.registerComponent("click-listener4", {
+          init: function() {
+            this.el.addEventListener("click", (e) => {
+              console.log("Tocando  el botón de Cerrar2") //
+              const info = document.querySelector("#info2");  //panel
+              const boton = document.querySelector("#boton2"); // triangulo
+          
+              info.setAttribute("visible", false);
+              info.setAttribute("position", "-17.6 -4.45 -70");
+    
+              boton.setAttribute("position","-17.6 -05.45 -8");            
+            })
+         }
+      })
+  //buitre
+  AFRAME.registerComponent("click-listener5", {
+          init: function() {
+            this.el.addEventListener("click", (e) => {
+              console.log("Tocando el circulo buitre") // 
+              const info = document.querySelector("#info3");  //panel informativo
+              const boton = document.querySelector("#boton3"); // el anillo click (aquí el mismo)
+          
+              info.setAttribute("visible", true);
+              info.setAttribute("position", "-3.30264 4.32384 -0.85193");  
+    
+              boton.setAttribute("position","-4 5.5 -80");             
+            })
+         }
+      })
+
+      AFRAME.registerComponent("click-listener6", {
+          init: function() {
+            this.el.addEventListener("click", (e) => {
+              console.log("Tocando  el botón de Cerrar3") //
+              const info = document.querySelector("#info3");  //panel informativo
+              const boton = document.querySelector("#boton3"); // el anillo click
+          
+              info.setAttribute("visible", false);
+              info.setAttribute("position", "-3.30264 4.32384 -80");
+    
+              boton.setAttribute("position","-4 5.5 0 ");            
+            })
+         }
+      })
+
+/* 
+ Añadir evento "click-listener"     
+      AFRAME.registerComponent("click-listener", {
+    init: function() {
+      this.el.addEventListener("click", (e) => {        
+        //Lo que quieras hacer ;)
+      })
+    }
+  })
+*/
+
+ /***     
+       * * AFRAME.registerComponent("click-listenerx", {  //añadimos variables
+          init: function(variable1, variable2) {
+            this.el.addEventListener("click", (e) => {
+              console.log("Tocando  el botón de Cerrar3") //
+              const info = document.querySelector("#info3");  //estas tendrian que ir fuera entonces...
+              const boton = document.querySelector("#boton3"); // el anillo click
+          
+              info.setAttribute("visible", false);
+              info.setAttribute("position", "-17.6 -4.45 -70");// y esto quedaria:
+
+              vairable1.setAttribute("visible", false);
+              variable1.setAttribute("position", "-17.6 -4.45 -70");
+    
+              boton.setAttribute("position","-17.6 -05.45 -8");         
+              variable2.setAttribute("position","-17.6 -05.45 -8");        
+            })
+         }
+      })
+       * *
+       * *
+       * *
+ ****/     
+
+    </script>
+</head> 
+<body>
+  <!-- 
+    <a href="indexTexto.html" style="position:absolute; bottom:15Px; left:15px; z-index:2;color: black; background-color: ivory; border-radius:5px; padding: 10px; border-radius:5% ;">Volver
+    </a>
+    -->
+
+    <a-scene loading-screen="dotsColor: red; backgroundColor: black" cursor="rayOrigin: mouse" vr-mode-ui="false">
+
+      <a-assets>
+    
+        <img id="cartel1" src="cartel_seta.jpg">
+        <img id="cartel2" src="cartel_carretera.jpg" >
+        <img id="cartel3" src="cartel_buitre.jpg">
+        <img id="botoncerrar" src="boton_cerrar.jpg" >
+
+    </a-assets>
+
+        <a-sky src="seta_P.jpg" rotation="0 285 0 "></a-sky>
+<!--Info seta-->
+        <a-ring id="boton1" color="#3D5FA0" radius-inner="0.1" radius-outer="0.2" position=".9  0 -2.3 " visible="" rotation="0 -12  0 "  click-listener1></a-ring>
+        <a-image id="info1" src="#cartel1" position="1.5 .5 -9 " visible="false" rotation="0 -20  0 " scale="1.4 1.4 1.4"> 
+          <a-image  src="#botoncerrar" material="" geometry="" scale="0.2 0.2 1" position="0.399 -0.4 0.124" click-listener2> </a-image> </a-image></a-image>
+        
+
+<!--Info carretera-->
+        <a-triangle id="boton2" color="#3D5F9F" vertex-c="1  -1 0" material="" geometry="" 
+        rotation="-65.62 43.78 -0.904" position="-17.6 -05.45 -8" click-listener3 opacity=""></a-triangle>
+        <a-image id="info2" src="#cartel2" position="-17.6 -4.45 -70" visible="false" rotation="0 60.795978683536525 0" scale="7.45445 7.45445 7.45445" material="" geometry=""> 
+          <a-image src="#botoncerrar" material="" geometry="" scale="0.2 0.2 1" position="0.399 -0.28 0.3" click-listener4=""> </a-image> </a-image>
+
+<!--Info buitre -->
+<a-ring id="boton3" color="#27843D" radius-inner="0.1" radius-outer="0.2" position="-4 5.5 0" visible=""
+ rotation="31.68 81.06 -18.57" click-listener5="" material="" geometry=""></a-ring>
+ <a-image id="info3" src="#cartel3" position="-3.30264 4.32384 -80" visible="true" rotation="41.05 88.89 -0.87" scale="2.16443 2.16443 2.16443" material="" geometry=""> 
+  <a-image src="#botoncerrar" material="" geometry="" scale="0.2 0.2 1" position="0.399 -0.4 0.124" click-listener6=""> </a-image> </a-image>
+    </a-scene>
+</body>
+</html>

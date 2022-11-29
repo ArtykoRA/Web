@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virgen de la Hoz, recorrido en 360º</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="hoz.js"></script>
+
+</head>
+
+<body>
+    
+  <a-scene  cursor="rayOrigin: mouse"  raycaster="objects: .clickable" vr-mode-ui="false">
+      <a-entity light="type: ambient; color: #BBB"></a-entity>
+      <a href="virgenmosaico.html" style="position:absolute; bottom:15Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Galería</a>
+      <a href="../index.html" style="position:absolute;top:40Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Índice principal</a>
+
+
+      <a-sky id="sky1"  src="assets/VirgendelaHoz_puerta_santuario.jpg" rotation="0 -90 0" visible="true" >            
+        <a-sphere class="clickable" color="grey" position="-25 1 -3"  click-listener></a-sphere>
+        <a-sphere class="clickable" color="grey " position="-25 5 4" opacity="0.8" click-listener2  ></a-sphere>
+        <a-sphere id="s3b1" class="clickable" color="grey " position="-9 1 20" opacity="0.8" click-listener3 ></a-sphere>
+          
+      </a-sky>
+      <a-sky id="sky2"  src="assets/VirgendelaHoz_restaurante.jpg" rotation="0 -90 0" visible="false" >
+        <a-sphere class="clickable" color="grey" position="6 1 -18"  click-listener4></a-sphere>
+        <a-sphere class="clickable" color="grey " position="0 8 18" opacity="0.8" click-listener2  ></a-sphere>
+        <a-sphere id="s3b2" class="clickable" color="grey " position="20 1 0 " opacity="0.8" click-listener3 ></a-sphere>
+      </a-sky>
+      <a-sky id="sky3"  src="assets/VirgendelaHoz_losa.jpg" rotation="0 -90 0" visible="false" >
+        <a-sphere class="clickable" color="green" position="24 -7 -26"  click-listener4></a-sphere>
+        <a-sphere class="clickable" color="green " position="11.5 -7 -18" opacity="0.8" click-listener ></a-sphere>
+        <a-sphere id="s3b3" class="clickable" color="green " position="20 -5 3 " opacity="0.8" click-listener3 ></a-sphere>
+      </a-sky>   
+      <a-sky id="sky4"  src="assets/VirgendelaHoz_Santuario.jpg" rotation="0 -90 0" visible="false" > 
+        <a-sphere id="b4" class="clickable" color="yellow" position="-13 20 22"  click-listener5></a-sphere>
+        <a-sphere id="b4b" class="clickable" color="grey" position="20 7.5 0" opacity="0.8" click-listener2  ></a-sphere>
+        <a-sphere id="b4bb" class="clickable" color="grey " position="18 1 22 " opacity="0.8" click-listener ></a-sphere>
+        <a-sphere id="b4bbb" class="clickable" color="blue " position="-7 1 -10 " radius ="0.7" opacity="0.8" click-listener7 ></a-sphere>
+      </a-sky>  
+      <a-sky id="sky5"  src="assets/VirgendelaHoz_Volando.jpg" rotation="0 110 0" visible="false" >
+        <a-sphere id="b5" class="not-clickable" color="black " position="0 -17 -25 " opacity="0.8" click-listener3 ></a-sphere> <!--XXX#-->
+        <a-sphere id="b5b" class="not-clickable" color="cyan" position="-13 20 22"  click-listener6></a-sphere>
+                 
+      </a-sky>  
+      <a-sky id="sky6"  src="assets/VirgendelaHoz_mirador.jpg" rotation="0 110 0" visible="false" >
+        <a-sphere id="b6" class="not-clickable" class="clickable" color="brown" position="-21 -2 0"  click-listener5></a-sphere>      
+      </a-sky> 
+      <a-sky id="sky7"  src="assets/VirgendelaHoz_muro_rio.jpg" rotation="0 110 0" visible="false" >
+        <a-sphere class="clickable" color="red" position="9 -4 -2"  click-listener8 ></a-sphere>
+        <a-sphere id="s3b4" class="clickable" color="pink" position="-9 0 2"  click-listener3 ></a-sphere>
+      </a-sky> 
+      <a-sky id="sky8"  src="assets/VirgendelaHoz_rio1.jpg" rotation="0 140 0" visible="false" >          
+        <a-sphere class="clickable" color="yellow" position="12 8 -8"  click-listener9></a-sphere>     
+      </a-sky> 
+
+
+  </a-scene>   
+
+  
+</body>       
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leader AR  T1</title>
+    <!-- incluir Mind  y Aframe libraries-->
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>   
+    <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!--incluir el camero Mock-->
+    <script src="/ra/JS/camera-mock.js"></script>
+
+    <!--Y el propio archivo .js que hace todo-->
+    <script src="/ra/JS/mainLeader.js"></script>
+
+
+</head>
+<body>
+    
+    <!--Crear la Escena-->
+    <a-scene mindar-image="imageTargetSrc: /assets/targets-leader.mind;   showStats: false; uiScanning: #example-scanning-overlay;" embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      
+        <!--Crear los Assets a utilizar-->
+
+        <a-assets>
+
+
+        </a-assets>
+
+
+
+
+
+
+        <!-- Crear la cámara-->
+        <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable">
+        </a-camera>
+
+        <!--Crear la Target y su contenido-->
+        <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
+            <!--En este caso un plano
+            <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>-->
+            <a-plane color="red" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+       
+       
+       
+       
+        </a-entity>
+
+
+
+    </a-scene>    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acueducto de Zaorejas, recorrido en 360º</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="acueducto.js"></script>
+
+</head>
+
+<body>
+    
+   <a-scene  cursor="rayOrigin: mouse" vr-mode-ui="false">
+      <a-entity light="type: ambient; color: #BBB"></a-entity>
+      <a href="zaorejasmosaico.html" style="position:absolute; bottom:15Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Galería</a>
+      <a href="../index.html" style="position:absolute;top:40Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Índice principal</a>
+
+      <a-sky id="sky6"  src="assets/Acueducto_vista_Lateral.jpg" rotation="0 -90 0" visible="true" >
+        <a-sphere color="brown" position="31.42508 -6.15105 -13.22918" click-listener></a-sphere>       
+      </a-sky> 
+
+      <a-sky id="sky1"  src="assets/Acueducto_otro_Lado_2.jpg" rotation="0 -90 0" visible="false" >           
+        <a-sphere color="blue" position="-16.65005 7.73931 27.29391" click-listener1></a-sphere>  
+        <a-sphere  color="red" position="12.47586 4.29926 -26.46261"  click-listener2></a-sphere> 
+        <a-sphere  color="yellow " position="17.90288 2.11386 0.917081" opacity="0.8" click-listener4></a-sphere>     
+      </a-sky>
+
+      <a-sky id="sky2"  src="assets/Acueducto_majuelo.jpg" rotation="0 45 0" visible="false" >      
+        <a-sphere  color="green " position="4.52361 0.21097 15.77669" opacity="0.8" click-listener3></a-sphere>
+      </a-sky>
+
+      <a-sky id="sky3"  src="assets/Acueducto_debajo.jpg" rotation="0 -130 0" visible="false" >
+        <a-sphere color="cyan " position="26.45265 1.29457 -1.97005" opacity="0.8" click-listener5  ></a-sphere>
+        <a-sphere color="green " position="-23.41475 1.12699 -6.77993" opacity="0.8" click-listener6  ></a-sphere>                    
+      </a-sky>   
+      
+      <a-sky id="sky5"  src="assets/Acueducto_Frente_3.jpg" rotation="0 -90 0" visible="false" >        
+        <a-sphere color="brown" position="49.40353 -3.00319 -3.34887" radius="2" click-listener7></a-sphere>          
+      </a-sky>  
+     
+   </a-scene>   
+
+  
+</body>       
+
+</html>

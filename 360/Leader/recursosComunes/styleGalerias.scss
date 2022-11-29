@@ -1,0 +1,74 @@
+$color-fondo: #FFFFFF;    
+$color-primario: #E1EACD;
+$color-primario2: #3700b3;
+$color-secundario: #fff;
+$color-fondo-cabecera:#9BBB59;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+*{
+    background-color: $color-fondo;
+    margin: 0;
+    padding: 0;
+
+}
+
+.cabecera{
+    background-color: $color-fondo-cabecera;
+   
+    width: 100%;
+   
+    
+}
+
+h1{
+    background-color: $color-fondo-cabecera;
+    color: $color-secundario;
+    padding: 2em;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+
+}
+h4{
+    background-color: $color-fondo-cabecera;
+    color:$color-secundario;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1em;
+}
+
+#galeria{
+    display: flex;
+    flex-direction: row ;
+    justify-content: center ;
+    flex-wrap: wrap ;
+    
+}
+
+.portafotos{
+    margin: 2em;
+    width: 400px;  
+}
+
+
+img{
+   
+    margin: auto;
+    display: block;
+    width: 80%;
+
+} 
+
+img:hover{
+    width: 100%;
+    box-shadow: 5px 5px   5px  #9BBB59;
+}
+
+p{
+    color: #000;
+    text-align: center;
+    margin: 2em;
+    font-family: 'Open Sans', sans-serif;
+}
+

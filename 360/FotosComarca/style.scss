@@ -1,0 +1,62 @@
+$color-morado: #A24BE7;    
+$color-azul: #2C68A6;
+$color-verde: #7FB029;
+$color-amarillo: #D2C31E;
+$color-rojo: #D92732;
+$color-oscuro: #343434;
+$color-gris: #6D6D6D;
+
+*{
+    margin:0;
+    padding:0;
+    background-color: $color-oscuro;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+.titulo{
+    color: $color-azul;
+    margin:5%;
+    margin-bottom: 10%; 
+    
+}
+.aframebox {
+    margin: auto;
+    width:98%;
+    height:80vh;
+    //height: 600px;
+    //width: 1000px;
+}
+
+h2{
+    color: $color-azul;
+    text-align: center;
+    margin:2%;
+    margin-bottom: 10%; 
+}
+.comentario{
+    color: $color-azul;
+    text-align: center;
+    margin:5%;
+    
+}
+
+
+
+hr{
+    color:$color-azul;
+    margin: auto;
+    margin-top: 10%;
+    width: 80%;
+}
+
+
+#notafin{
+    text-align: center;
+    color:$color-azul;
+    font-size: medium;
+    margin: 5%;
+
+}

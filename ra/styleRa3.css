@@ -2,9 +2,8 @@
   margin: 0;
   padding: 0;
   background-color: #343434;
-  font-family: 'Roboto', sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 #cabeceraLogo {
@@ -43,7 +42,6 @@ H2 {
     height: 100vh;
   }
 }
-
 /*Fin parte VISOR*/
 /*comienzo footer  */
 footer {
@@ -63,15 +61,9 @@ footer {
   text-align: center;
   margin: auto;
   font-size: 6vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #notafinal {
@@ -82,15 +74,9 @@ footer {
   color: #D92732;
   text-align: center;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -117,12 +103,10 @@ a:hover {
   background-color: #313131;
   border-bottom: 1px solid;
   border: 10px;
-  background: -webkit-gradient(linear, left top, right top, from(#A24BE7), color-stop(#2C68A6), color-stop(#7FB029), color-stop(#D2C31E), to(#D92732));
   background: linear-gradient(to right, #A24BE7, #2C68A6, #7FB029, #D2C31E, #D92732);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
-/*fin footer*/
-/*# sourceMappingURL=styleRa3.css.map */
+/*fin footer*//*# sourceMappingURL=styleRa3.css.map */

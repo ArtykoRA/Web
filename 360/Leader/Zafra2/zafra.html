@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Castillo de Zafra, recorrido virtual.</title>
+
+  <script src="../aframe.min.js"></script>
+  <script src="zafra.js"></script>
+
+</head>
+
+<body>
+    
+  <a-scene  cursor="rayOrigin: mouse" raycaster="objects: .clickable"  vr-mode-ui="false">
+    
+    <a-entity light="type: ambient; color: #BBB"></a-entity>
+    <a href="zaframosaico2.html" style="position:absolute; bottom:15Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Galería</a>
+    <a href="../index.html" style="position:absolute;top:40Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Índice principal</a>
+
+     
+    <a-sky id="sky1" class="not-clickable" src="assets/vista_este.jpg" rotation="0 70 0" visible="true" >
+      <a-sphere id="b1" class="clickable" color="green" position="-21.31571 20.73902 -34.7273" opacity="0.8" radius="1.5" click-listener2></a-sphere>
+      <a-sphere id="b1b" class="clickable" color="green" position="-29.48698 14.782 9.41167" opacity="0.8" radius="1.5" click-listener4></a-sphere>
+    </a-sky>
+    <a-sky id="sky2" class="not-clickable" src="assets/sobreescalera_norte.jpg" rotation="0 180 0" visible="false" >
+        <a-sphere id="b2" class="not-clickable" color="green" position="-18.12852 46.67518 0.41402" opacity="0.8" radius="1.5" click-listener3></a-sphere>
+        <a-sphere id="b2b" class="not-clickable" color="green" position="-17.99085 -16.53205 27.86958" opacity="0.8" radius="1.5" click-listener21></a-sphere>
+    </a-sky>
+    <a-sky id="sky3" class="not-clickable" src="assets/torre_norte_sur.jpg" rotation="0 0 0" visible="false" >
+        <a-sphere id="b3" class="not-clickable" color="green" position="-0.34529 -43.94805 -18.62634" opacity="0.8" radius="1.5" click-listener2></a-sphere>
+        <a-sphere id="b3b" class="not-clickable" color="green" position="32.20767 -24.38875 16.70565" opacity="0.8" radius="1.5" click-listener21></a-sphere>
+        <a-sphere id="b3bb" class="not-clickable" color="green" position="15.18771 -9.9793 30.69902" opacity="0.8" radius="1.5" click-listener4></a-sphere>
+    </a-sky>
+    <a-sky id="sky4" class="not-clickable" src="assets/torre_sur_sur.jpg" rotation="0 0 0" visible="false" >
+        <a-sphere id="b4" class="not-clickable" color="green" position="-47.22347 22.64161 -59.12265" opacity="0.8" radius="1.5" click-listener3></a-sphere>
+        <a-sphere id="b4b" class="not-clickable" color="green" position="12.01201 -29.57419 18.49271" opacity="0.8" radius="1.5" click-listener5></a-sphere>
+        <a-sphere id="b4bb" class="not-clickable" color="green" position="7.45733 -12.36422 -36.42789" opacity="0.8" radius="1.5" click-listener21></a-sphere>
+    </a-sky>
+    <a-sky id="sky5" class="not-clickable" src="assets/cara_sur.jpg" rotation="0 0 0" visible="false" >
+        <a-sphere id="b5" class="not-clickable" color="green" position="-7.4146 39.60027 27.71766" opacity="0.8" radius="1.5" click-listener4></a-sphere>
+        <a-sphere id="b5b" class="not-clickable" color="green" position="23.85755 10.51848 35.07943" opacity="0.8" radius="1.5" click-listener6></a-sphere>
+    </a-sky>
+    <a-sky id="sky6" class="not-clickable" src="assets/Escaleras_roca.jpg" rotation="0 0 0" visible="false" >
+        <a-sphere id="b6" class="not-clickable" color="green" position="-15.75979 10.07501 39.5189" opacity="0.8" radius="1.5" click-listener61></a-sphere>
+        <a-sphere id="b6b" class="not-clickable" color="green" position="-30.16514 24.81267 -32.90996" opacity="0.8" radius="1.5" click-listener7></a-sphere>
+    </a-sky>
+    <a-sky id="sky7" class="not-clickable" src="assets/oeste_ladera.jpg" rotation="0 0 0" visible="false" >
+      <a-sphere id="b7" class="not-clickable" color="green" position="43.3462 -13.73824 5.07832" opacity="0.8" radius="1.5" click-listener71></a-sphere>
+      <a-sphere id="b7b" class="not-clickable" color="green" position="-30.18421 7.21218 24.34994" opacity="0.8" radius="1.5" click-listener8></a-sphere>
+    </a-sky>
+    <a-sky id="sky8" class="not-clickable" src="assets/General_oeste.jpg" rotation="0 180 0" visible="false" >
+      <a-sphere id="b8" class="not-clickable" color="green" position="3.99565 -5.1709 47.1103" opacity="0.8" radius="1.5" click-listener81></a-sphere>
+      <a-sphere id="b8b" class="not-clickable" color="green" position="27.74694 18.28605 33.37945" opacity="0.8" radius="1.5" click-listener9></a-sphere><!-- voy-->
+    </a-sky>
+
+
+
+
+
+
+  </a-scene>    
+
+</body>
+
+</html>
+

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AframeClick4 Prueba Script del AVANCED</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <script>
+        AFRAME.registerComponent("click-listener", {
+          init: function() {
+            this.el.addEventListener("click", (e) => {
+              console.log(e.target)
+              //window.location.href="roja.html";   //bien esto abre otra ventana!!!!!!! 1 funcion para cada uno es una chapuza.... pero funcionará... creo.
+            })
+          }
+        })
+
+        AFRAME.registerComponent("click-listener1", {
+          init: function() {
+            this.el.addEventListener("click", (e) => {
+              console.log("tocaditoooooo") // efectivamente funciona ok... en escritorio
+             // window.location.href="verde.html";   //bien esto abre otra ventana!!!!!!! .
+            })
+          }
+        })
+
+        AFRAME.registerComponent("click-listener3", {
+          init: function() {
+            this.el.addEventListener("click", (e) => {
+              console.log("tocadegf retygreyghetyht") // efectivamente funciona ok... en escritorio
+             // window.location.href="verde.html";   //bien esto abre otra ventana!!!!!!! .
+            })
+          }
+        })
+
+        AFRAME.registerComponent("click-listener4", {
+          init: function() {var siono = 1;
+            this.el.addEventListener("click", (e) => {
+              console.log("Tocando el cubo amarillo") // efectivamente funciona ok... en escritorio  y en el movil tmb.
+
+              const labola = document.querySelector("#bola");
+              const cubomarillo = document.querySelector("#cuboclicado4");
+          
+              labola.setAttribute("visible", true);
+              labola.setAttribute("position", "0 1 -3");
+              cubomarillo.setAttribute("position","0 0 -23");
+              
+            })
+          }
+        })
+        AFRAME.registerComponent("click-listener5", {
+          init: function() {var siono = 1;
+            this.el.addEventListener("click", (e) => {
+              console.log("Tocando el cubo amarillo") // efectivamente funciona ok... en escritorio  y en el movil tmb.
+
+              const labola = document.querySelector("#bola");
+              const cubomarillo = document.querySelector("#cuboclicado4");
+          
+              labola.setAttribute("visible", false);
+              labola.setAttribute("position", "0 1 -21");
+              cubomarillo.setAttribute("position","0 1 -3");
+              
+            })
+          }
+        })
+        AFRAME.registerComponent("click-listener6", {
+          init: function() {
+            this.el.addEventListener("click", (e) => {
+              console.log("Tocando el anillo de información") // efectivamente funciona ok... en escritorio  y en el movil tmb.
+
+              const imag = document.querySelector("#imagen1");
+              const panelInfo = document.querySelector("#info1");
+          
+              imag.setAttribute("visible", true);
+              imag.setAttribute("position", "-8.46666 1.24461 17");
+              imag.setAttribute("scale", "10 10 10");
+              panelInfo.setAttribute("position","-8.46666 1.24461 45");
+              
+            })
+          }
+        })
+
+
+    </script>
+
+<script>
+        
+        AFRAME.registerComponent("clickable", {
+          init: function() {
+       
+        const profileButton = document.querySelector("#profile-button");
+        const webButton = document.querySelector("#web-button");
+        const emailButton = document.querySelector("#email-button");
+        const locationButton = document.querySelector("#location-button");
+        const text = document.querySelector("#text");
+/*
+        profileButton.setAttribute("visible", true);
+        setTimeout(() => {
+          webButton.setAttribute("visible", true);
+          console.log("mostrando el webButton;")
+        }, 300);
+        setTimeout(() => {
+          emailButton.setAttribute("visible", true);
+        }, 600);
+        setTimeout(() => {
+          locationButton.setAttribute("visible", true);
+        }, 900);*/
+
+        let currentTab = '';
+        webButton.addEventListener('click', function (evt) {
+          text.setAttribute("value", "https://leader-Molina");
+          currentTab = 'web';
+        });
+        emailButton.addEventListener('click', function (evt) {
+          text.setAttribute("value", "hola@correo.es");
+          currentTab = 'email';
+        });
+        profileButton.addEventListener('click', function (evt) {
+          text.setAttribute("value", "La comarca en 360º");
+          currentTab = 'profile';
+        });
+        locationButton.addEventListener('click', function (evt) {
+          console.log("loc en venga dime que sales.");
+          text.setAttribute("value", "Norte, Sabinar, Sierras.");
+          currentTab = 'location';
+        });
+
+        text.addEventListener('click', function (evt) {
+          if (currentTab === 'web') {
+            window.location.href="alpetea.html";
+          }
+        });
+      }});
+    
+    
+
+
+     
+          
+          
+
+
+</script>
+    
+
+</head>
+<body>
+
+    <a href="indexTexto.html" style="position:absolute; bottom:15Px; left:15px; z-index:2;color: black; background-color: ivory; border-radius:5px; padding: 10px; border-radius:5% ;">Volver
+    </a>
+    <a-scene  cursor="rayOrigin: mouse" vr-mode-ui="false">
+      <a-assets>
+
+        <img id="icon-web" src="advanced_files/web.png">
+        <img id="icon-location" src="advanced_files/location.png">
+        <img id="icon-profile" src="advanced_files/profile.png">
+        <img id="icon-phone" src="advanced_files/phone.png">
+        <img id="icon-email" src="advanced_files/email.png">
+      </a-assets>
+
+
+        <a-sky src="alpetea2_P.jpg" rotation="0 0 0 "></a-sky>
+        <!--  
+        <a-box id="cuboclicado1"  color="red" depth="0.1"  width="1" position="-1 1 -3" click-listener></a-box>
+        <a-box id="cuboclicado2"  color="green" depth="0.1"  width="1" position="1 1 -3" click-listener1></a-box>
+        <a-box id="cuboclicado3"  color="green" depth="0.1"  width="1" position="1 2.3 -3" click-listener3></a-box>
+        <a-box id="cuboclicado4"  color="yellow" depth="0.1"  width="1" position="0 1 -3" click-listener4></a-box>
+        <a-sphere  id="bola" radius="0.5" color="yellow" position="0 1 -21" visible="false" click-listener5></a-sphere>
+     
+        <a-ring id="info1" position="-8.46666 1.24461 17" material="color: #0000ff" geometry="radiusInner: 0.29; radiusOuter: 0.45" scale="" rotation="0 180 0" click-listener6></a-ring>
+        <a-image id="imagen1" src="img1.png" position="-8.46666 1.24461 26 " visible="false" rotation="0 135 0 "></a-image>
+-->
+        <a-image visible="" id="profile-button" class="clickable" src="#icon-profile" position="-0.8 1 -2" height="0.15" width="0.15" 
+        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate" material="" geometry=""></a-image>
+        <a-image visible="" id="web-button" class="clickable" src="#icon-web" alpha-test="0.5" position="-0.4 1 -2" height="0.15" width="0.15" 
+        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate" material="" geometry=""></a-image>
+        <a-image visible="" id="email-button" class="clickable" src="#icon-email" position="0 1 -2" height="0.15" width="0.15" 
+        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate" material="" geometry=""></a-image>
+        <a-image visible="  " id="location-button" class="clickable" src="#icon-location" position="0.4 1 -2" height="0.15" width="0.15" 
+        animation="property: scale; to: 1.2 1.2 1.2; dur: 1000; easing: easeInOutQuad; ; dir: alternate" material="" geometry=""></a-image>
+
+        <a-text id="text" class="clickable" value="" color="black" align="center" width="2" position="0 0.5 -2" 
+        geometry="primitive:plane; height: 0.1; width: 2;" material="opacity: 0.5" text=""></a-text>
+
+
+   </a-scene> 
+</body>
+</html>

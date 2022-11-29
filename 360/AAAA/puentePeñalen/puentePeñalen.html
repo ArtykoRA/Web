@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puente de Peñalen, recorrido en 360º</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+<script>
+           AFRAME.registerComponent("click-listener", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {           
+            const apago = document.querySelector("#sky1");
+            const enciendo = document.querySelector("#sky2");  
+   
+            apago.setAttribute("visible",false);
+            enciendo.setAttribute("visible",true); 
+            console.log("pulsando click-listener");
+        })
+      }
+    })
+    AFRAME.registerComponent("click-listener2", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {           
+            const apago = document.querySelector("#sky2");
+            const enciendo = document.querySelector("#sky3");  
+   
+            apago.setAttribute("visible",false);
+            enciendo.setAttribute("visible",true); 
+            console.log("pulsando click-listener2");
+        })
+      }
+    })
+    AFRAME.registerComponent("click-listener3", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {           
+            const apago = document.querySelector("#sky2");
+            const enciendo = document.querySelector("#sky1");  
+   
+            apago.setAttribute("visible",false);
+            enciendo.setAttribute("visible",true); 
+            console.log("pulsando click-listener3");
+        })
+      }
+    })
+    AFRAME.registerComponent("click-listener4", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {           
+            const apago = document.querySelector("#sky3");
+            const enciendo = document.querySelector("#sky4");  
+   
+            apago.setAttribute("visible",false);
+            enciendo.setAttribute("visible",true); 
+            console.log("pulsando click-listener4");
+        })
+      }
+    })
+    AFRAME.registerComponent("click-listener5", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {           
+            const apago = document.querySelector("#sky3");
+            const enciendo = document.querySelector("#sky2");  
+   
+            apago.setAttribute("visible",false);
+            enciendo.setAttribute("visible",true); 
+            console.log("pulsando click-listener5");            
+        })
+      }
+    })
+    AFRAME.registerComponent("click-listener6", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {           
+            const apago = document.querySelector("#sky4");
+            const enciendo = document.querySelector("#sky5");  
+   
+            apago.setAttribute("visible",false);
+            enciendo.setAttribute("visible",true); 
+            console.log("pulsando click-listener6");
+        })
+      }
+    })
+    AFRAME.registerComponent("click-listener7", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {           
+            const apago = document.querySelector("#sky4");
+            const enciendo = document.querySelector("#sky3");  
+   
+            apago.setAttribute("visible",false);
+            enciendo.setAttribute("visible",true); 
+            console.log("pulsando click-listener7");            
+        })
+      }
+    })
+    AFRAME.registerComponent("click-listener8", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {           
+            const apago = document.querySelector("#sky5");
+            const enciendo = document.querySelector("#sky4");  
+   
+            apago.setAttribute("visible",false);
+            enciendo.setAttribute("visible",true); 
+            console.log("pulsando click-listener8");            
+        })
+      }
+    })
+</script>
+
+
+
+</head>
+<body>
+    
+    <a-scene  cursor="rayOrigin: mouse" vr-mode-ui="false">
+        <a-entity light="type: ambient; color: #BBB"></a-entity>
+        <a href="../indexgalerias.html" style="position:absolute; bottom:15Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Volver</a>
+
+
+        <a-sky id="sky1"  src="assets/1_puente_Entrada.jpg" rotation="0 -90 0" visible="true" >
+            <a-sphere id="boton1" color="#123012" position="22 3 1"  click-listener></a-sphere>
+        </a-sky>
+        <a-sky id="sky2" src="assets/2_Puente_Medio.jpg" rotation="0 -70 0" visible="false">
+            <a-sphere color="#123012" position="22 1 -20"  click-listener2></a-sphere>
+            <a-sphere color="white" position="-22 0 8"   click-listener3></a-sphere>
+        </a-sky>
+
+        <a-sky id="sky3" src="assets/3_camino_madera.jpg" rotation="0 130 0" visible="false">
+            <a-sphere color="#123012" position="-14 -3 -25" click-listener4></a-sphere>
+            <a-sphere color="white" position="-22 2.8 11"  click-listener5></a-sphere>
+
+        </a-sky>
+        <a-sky id="sky4" src="assets/4_bajada.jpg" rotation="0 -110 0" visible="false">
+            <a-sphere color="#123012" position="-17 -7 22" click-listener6></a-sphere>
+            <a-sphere color="white" position="8  8 25"  click-listener7></a-sphere>
+        </a-sky>
+        <a-sky id="sky5"  src="assets/5_rio.jpg" rotation="0 130 0" visible="false" >
+            <a-sphere color="white" position="0  10 -25" opacity="0.3" radius="1.3"  click-listener8></a-sphere>
+        </a-sky>
+
+    </a-scene>    
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+   // background-color: red;
+}
+
+
+
+img{
+  position: absolute;
+  top: 20%;
+  left:25%; 
+}
+
+
+#nombre{
+  text-align: center;
+  background-color: rgb(249, 23, 166);
+}
+
+
+@keyframes desaparecer { 
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    
+  }
+  
+}
+
+#logo{
+  animation: desaparecer 5s;
+}
+
+
+/*  
+@keyframes aparecer { 
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes aparecer2 { 
+    
+    0% {
+      opacity: 0;
+    }
+  60%{
+    opacity: 0;
+  }
+    100% {
+      opacity: 1;
+    }
+  }
+
+#logo{
+    //display: none;
+    //animation: aparecer 5s  ;
+    animation-name: aparecer2;
+    animation-duration: 6s;
+    //animation-timing-function: linear;
+    //animation-delay: 20s;
+}
+
+#rio{
+    animation: aparecer 8s  ;
+}
+
+#arbol{
+    animation-name: aparecer2  ;
+   
+   
+    animation-duration: 4s;
+    //animation-delay: 20s;
+}*/

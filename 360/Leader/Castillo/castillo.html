@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Castillo de Molina de Aragón, recorrido en 360º</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="castillo.js"></script>
+
+</head>
+
+<body>
+    
+  <a-scene  cursor="rayOrigin: mouse" vr-mode-ui="false">
+      <a-entity light="type: ambient; color: #BBB"></a-entity>
+      <a href="castillomosaico.html" style="position:absolute; bottom:15Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Galería</a>
+      <a href="../index.html" style="position:absolute;top:40Px; left:15px; z-index:2;color: black; background-color: white;padding: 10px; border-radius:5% ;">Índice principal</a>
+
+      <a-sky id="sky1"  src="assets/1_EntradaCarretera.jpg" rotation="0 -90 0" visible="true" >            
+        <a-sphere  color="yellow " position="12 8.5 12 " opacity="0.8" click-listener ></a-sphere>   
+      </a-sky>
+      <a-sky id="sky2"  src="assets/3_P1_dentro.jpg" rotation="0 45 0" visible="false" >
+        <a-sphere  color="red" position="-1 0.5 -16"  click-listener2></a-sphere>
+        <a-sphere  color="green " position="-13 4.5 6" opacity="0.8" click-listener3></a-sphere>
+      </a-sky>
+      <a-sky id="sky3"  src="assets/4_Iglesia.jpg" rotation="0 -130 0" visible="false" >
+        <a-sphere  color="cyan " position="8 -1 25 " opacity="0.8" click-listener4 ></a-sphere>
+        <a-sphere  color="green " position="-14 7 -18" opacity="0.8" click-listener5 ></a-sphere>                      
+      </a-sky>   
+      <a-sky id="sky4"  src="assets/5_PuertaPatioArmas.jpg" rotation="0 -45 0" visible="false" > 
+        <a-sphere  color="yellow" position="-17 3 22"  click-listener6></a-sphere>
+        <a-sphere  color="blue " position="7.3 2 -10 " radius ="0.7" opacity="0.8" click-listener7 ></a-sphere>
+      </a-sky>  
+      <a-sky id="sky5"  src="assets/6_PatioArmas.jpg" rotation="0 -90 0" visible="false" >
+        <a-sphere  color="grey" position="29.83054 -3.11413 -49.36217" radius ="2" opacity="0.8" click-listener5 ></a-sphere>        
+        <a-sphere  color="yellow" position="53  37 -53"   radius ="2"  click-listener8></a-sphere>
+        
+        <a-sphere  color="cyan" position="63.33992 11.93849 -38.40451"   radius ="2"  click-listener9></a-sphere>
+        
+        <a-sphere  color="brown" position="44.3018 12.21383 39.45748"    radius ="2"  click-listener10></a-sphere>         
+      </a-sky>  
+      <a-sky id="sky6"  src="assets/9_2_VolandoOeste.jpg" rotation="0 -90 0" visible="false" >
+        <a-sphere  color="brown" position="-21 -2 0"  click-listener13></a-sphere>      
+      </a-sky> 
+      <a-sky id="sky7"  src="assets/8_Ventana1.jpg" rotation="0 -90 0" visible="false" >
+        <a-sphere  color="pink" position="-9 0 2" radius="0.7" click-listener11 ></a-sphere>
+      </a-sky> 
+      <a-sky id="sky8"  src="assets/13_Ventana_22.jpg" rotation="0 -80  0" visible="false" >          
+        <a-sphere  color="yellow" position="-29.85253 -0.95381 2.30194"  click-listener12></a-sphere>     
+      </a-sky> 
+
+
+  </a-scene>   
+
+  
+</body>       
+
+</html>

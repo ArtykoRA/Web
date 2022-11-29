@@ -8,11 +8,10 @@ h1 {
 * {
   margin: 0;
   padding: 0;
-  background-color: #07102f;
-  background-color: #07102f;
-  font-family: 'Roboto', sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  background-color: rgb(7, 16, 47);
+  background-color: rgb(7, 16, 47);
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 #top {
@@ -22,8 +21,6 @@ h1 {
 }
 
 #BarraArriba {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   z-index: 9;
 }
@@ -36,24 +33,16 @@ h1 {
 .topnav {
   width: 100%;
   text-align: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
   margin-right: 3em;
 }
-
 .topnav a {
   font-size: 2em;
   margin-left: 2em;
-  background-color: #07102f;
+  background-color: rgb(7, 16, 47);
 }
-
 .topnav a:hover {
   color: white;
 }
@@ -66,7 +55,6 @@ h1 {
     font-size: 1.5em;
   }
 }
-
 @media only screen and (max-width: 870px) and (min-width: 530px) {
   .topnav {
     margin-right: 0.8em;
@@ -75,7 +63,6 @@ h1 {
     font-size: 1em;
   }
 }
-
 @media only screen and (max-width: 530px) and (min-width: 5px) {
   .topnav {
     margin-right: 0.2em;
@@ -96,7 +83,7 @@ h1 {
   }
   .intro {
     background-color: #2C68A6;
-    color: #b7b9a2;
+    color: rgb(183, 185, 162);
     margin-left: 2%;
     margin-right: 0%;
     font-size: 1em;
@@ -106,7 +93,6 @@ h1 {
     padding-top: 150px;
   }
 }
-
 #LogolUZ {
   width: 30%;
   margin: auto;
@@ -124,7 +110,7 @@ h1 {
   text-align: center;
   font-size: 6em;
   font-style: oblique;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 600;
 }
 
@@ -153,7 +139,6 @@ h1 {
     padding-top: 40px;
   }
 }
-
 /*fin cabeza etc*/
 #video {
   background-color: #D2C31E;
@@ -172,14 +157,12 @@ h1 {
   padding-top: 150px;
   padding-right: 4em;
 }
-
 #Espectaculos H1 {
   margin-bottom: 2em;
   color: #2C68A6;
   padding-left: 17%;
   font-weight: 800;
 }
-
 #Espectaculos p {
   margin-top: 3em;
   padding-left: 1em;
@@ -190,27 +173,19 @@ h1 {
 /*  formulario de contacto   */
 #contacto {
   background-color: #04AA6D;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 #fr {
   background-color: pink;
 }
 
-::-webkit-input-placeholder {
+::-moz-placeholder {
   color: red;
 }
 
 :-ms-input-placeholder {
-  color: red;
-}
-
-::-ms-input-placeholder {
   color: red;
 }
 
@@ -225,23 +200,14 @@ label {
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
-  width: 100%;
-  /* Full width */
-  padding: 12px;
-  /* Some padding */
-  border: 1px solid #ccc;
-  /* Gray border */
-  border-radius: 4px;
-  /* Rounded borders */
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  /* Make sure that padding and width stays in place */
-  margin-top: 6px;
-  /* Add a top margin */
-  margin-bottom: 16px;
-  /* Bottom margin */
-  resize: vertical;
-  /* Allow the user to vertically resize the textarea (not horizontally) */
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: #D2C31E;
 }
 
@@ -272,7 +238,7 @@ input[type=submit]:hover {
 footer {
   /*  border:2px solid red; */
   margin-top: 5vh;
-  padding-top: 2  vh;
+  padding-top: 2 vh;
   width: 100%;
   background-color: #343434;
   border-radius: 3vh 3vh 0vh 0vh;
@@ -282,10 +248,7 @@ footer {
   background-color: #343434;
   width: 70%;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
@@ -300,47 +263,35 @@ footer {
   text-align: center;
   margin: auto;
   font-size: 6vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #notafinal {
   font-size: 2em;
   width: 50%;
   height: 15vh;
-  color: #135bb9;
+  color: rgb(19, 91, 185);
   background-color: #343434;
   text-align: center;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
   outline: none;
   text-decoration: none;
-  color: #135bb9;
+  color: rgb(19, 91, 185);
   border-bottom: 3px solid;
-  border-color: #135bb9;
+  border-color: rgb(19, 91, 185);
   background-color: #343434;
 }
 
 a:link {
-  color: #135bb9;
+  color: rgb(19, 91, 185);
 }
 
 /*
@@ -357,7 +308,6 @@ a:hover {
   background-color: #313131;
   border-bottom: 1px solid;
   border: 10px;
-  background: -webkit-gradient(linear, left top, right top, from(#A24BE7), color-stop(#2C68A6), color-stop(#7FB029), color-stop(#D2C31E), to(#D92732));
   background: linear-gradient(to right, #A24BE7, #2C68A6, #7FB029, #D2C31E, #D92732);
   background-clip: text;
   -webkit-background-clip: text;
@@ -391,5 +341,4 @@ a:hover {
   100% {
     opacity: 1;
   }
-}
-/*# sourceMappingURL=styleLuzYFuego.css.map */
+}/*# sourceMappingURL=styleLuzYFuego.css.map */

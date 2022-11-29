@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla para cambios de cielo con click</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    
+<script>
+       AFRAME.registerComponent("click-listener", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {           
+            const cielo = document.querySelector("#sky");
+            const cielo1 = document.querySelector("#sky1");      
+            const cielo3 = document.querySelector("#sky3");
+            const cielo4 = document.querySelector("#sky4");    
+            cielo.setAttribute("visible",false);
+            cielo1.setAttribute("visible",true);
+            cielo3.setAttribute("visible",false);
+            cielo4.setAttribute("visible",false);
+            console.log("pulsando bolita");
+            //boton1.setAttribute("visible", false);
+        })
+      }
+    })
+    AFRAME.registerComponent("click-listener2", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {           
+            const cielo = document.querySelector("#sky1");
+            const cielo1 = document.querySelector("#sky2");  
+            
+            
+            
+
+            cielo.setAttribute("visible",false);
+            cielo1.setAttribute("visible",true);
+            console.log("pulsando bolita2");
+            //boton1.setAttribute("visible", false);
+        })
+      }
+    })
+    AFRAME.registerComponent("click-listener4", {
+      init: function() {
+        this.el.addEventListener("click", (e) => {           
+            const cielo = document.querySelector("#sky2");
+            const cielo1 = document.querySelector("#sky3"); 
+            
+            
+            cielo.setAttribute("visible",false);
+            cielo1.setAttribute("visible",true);
+            console.log("pulsando bolita2");
+            //boton1.setAttribute("visible", false);
+        })
+      }
+    })
+
+</script>
+
+</head>
+
+<body>
+   
+     
+  <a-scene  cursor="rayOrigin: mouse" vr-mode-ui="false">
+       
+        
+
+        <a-sky id="sky" radius="24" src="assets/zafra/Zafra_escalera_Norte_2.jpg" rotation="0 80 0" visible="true" >
+            <a-circle  id="boton_torre_norte" color="white"  position="-5.2 19 -3.4" opaciti="0.2" rotation="73 1 0.7" click-listener></a-circle>
+        </a-sky>
+        <a-sky id="sky1" src="assets/zafra/Zafra_torre_norte.jpg" rotation="0 -123 0" visible="false">
+            <a-sphere id="boton_entretorres" position="6.23216 -5.74004 12.95773" radius="1" color="grey" click-listener2></a-sphere>
+            <a-sphere id="boton_vista_general" position="-9.1928 -2.26022 1.24781" radius=".5" color="red" click-listener3></a-sphere>
+            <a-sphere id="boton_oeste" position="7.90102 -2.67882 0.42689" radius=".5" color="green" click-listener5></a-sphere>
+        </a-sky>
+
+        <a-sky id="sky2" src="assets/zafra/Zafra_entretorres.jpg" rotation="0 220 0" visible="false">
+            <a-sphere id="boton2_torre_sur" position="-9.35943 14.96187 24.2267" radius="1" color="grey" click-listener4></a-sphere>
+            <a-sphere id="boton_torre_norte" position="-6.33844 13.09465 -20.15643" radius=".5" color="red" click-listener></a-sphere>
+            <a-sphere id="boton_oeste" position="15.30934 -2.3073 -4.10426" radius=".5" color="green" click-listener5></a-sphere>
+
+        </a-sky>
+        <a-sky id="sky3" src="assets/zafra/Zafra_oeste.jpg" rotation="0 -110 0" visible="false">
+            <a-sphere id="boton_torre_sur" position="50.55669 27.85227 -24.82906" radius="1" color="grey" click-listener4></a-sphere>
+            <a-sphere id="boton_torre_norte" position="25.31335 29.74656 30.91101" radius=".5" color="red" click-listener></a-sphere>
+            <a-sphere id="boton_entretorres" position="14.58363 9.02802 3.14694" radius=".5" color="green" click-listener2></a-sphere>
+        </a-sky>
+
+  </a-scene> 
+
+</body>
+   
+</html>

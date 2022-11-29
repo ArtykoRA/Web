@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--<Script src="../recursosComunes/aframe.min.js"></Script>  --> 
+    <Script src="aframe.min.js"></Script>
+    <script src="mindar-image.prod.js"></script>
+    <script src="mindar-image-aframe.prod.js"></script>
+    <title>Pruebas de portada leader</title>
+
+
+    <style>
+
+
+      #example-scanning-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 2;
+      }
+      @media (min-aspect-ratio: 1/1) {
+  #example-scanning-overlay .inner {
+    width: 50vh;
+    height: 50vh;
+  }
+      }
+      @media (max-aspect-ratio: 1/1) {
+  #example-scanning-overlay .inner {
+    width: 80vw;
+    height: 80vw;
+  }
+      }
+
+      #example-scanning-overlay .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background:
+    linear-gradient(to right, white 10px, transparent 10px) 0 0,
+    linear-gradient(to right, white 10px, transparent 10px) 0 100%,
+    linear-gradient(to left, white 10px, transparent 10px) 100% 0,
+    linear-gradient(to left, white 10px, transparent 10px) 100% 100%,
+    linear-gradient(to bottom, white 10px, transparent 10px) 0 0,
+    linear-gradient(to bottom, white 10px, transparent 10px) 100% 0,
+    linear-gradient(to top, white 10px, transparent 10px) 0 100%,
+    linear-gradient(to top, white 10px, transparent 10px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+      }
+
+      #example-scanning-overlay.hidden {
+  display: none;
+      }
+
+      #example-scanning-overlay img {
+  opacity: 0.6;
+  width: 50%;
+  align-self: center;
+      }
+
+      #example-scanning-overlay .inner .scanline {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: white;
+ animation: move 4s linear infinite;
+      }
+      @keyframes move {
+  0%, 100% { top: 0% }
+  50% { top: calc(100% - 10px) }
+      }
+    </style>
+
+  <script>
+    AFRAME.registerComponent("click-listener1", {
+        init: function() {
+          this.el.addEventListener("click", (e) => { 
+              console.log("pulsando click-listener1");     
+              window.location.href="../Zafra2/zafra.html";     
+                
+          })
+        }
+    })
+    
+    </script>
+    <script>
+      AFRAME.registerComponent("click-listener2", {
+          init: function() {
+            this.el.addEventListener("click", (e) => { 
+                console.log("pulsando click-listener2");     
+                window.location.href="../chequilla/chequilla.html";     
+                  
+            })
+          }
+      })
+      
+      </script>
+      <script>
+        AFRAME.registerComponent("click-listener3", {
+            init: function() {
+              this.el.addEventListener("click", (e) => { 
+                  console.log("pulsando click-listener3");     
+                  window.location.href="../recorridosZaorejas.html  ";     
+                    
+              })
+            }
+        })
+        
+        </script>
+
+<script>
+  AFRAME.registerComponent("click-listener4", {
+      init: function() {
+        this.el.addEventListener("click", (e) => { 
+            console.log("pulsando click-listener4");     
+            window.location.href="../mesa/mesa.html";     
+              
+        })
+      }
+  })
+</script>
+
+</head>
+
+<html>
+  <body>
+    <div id="example-scanning-overlay" class="">
+      <div class="inner">
+  <img src="QR_TEXTO.png">
+  <div class="scanline"></div>
+      </div>
+</div>
+
+   
+
+    <a-scene mindar-image="uiScanning: #example-scanning-overlay;  imageTargetSrc: targets_QRcompleto.mind " vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" >
+      
+      
+      <a-assets>
+        <a-asset-item id="uno" src="assets/campillo.glb"></a-asset-item>
+        <a-asset-item id="dos" src="assets/chequilla.glb"></a-asset-item>
+        <a-asset-item id="tres" src="assets/zaorejas.glb"></a-asset-item>
+        <a-asset-item id="cuatro" src="assets/mesa.glb"></a-asset-item>
+
+    </a-assets>
+    
+
+
+      <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: 10000; objects: .clickable" camera="" rotation="" wasd-controls="">
+      </a-camera>
+      <a-entity mindar-image-target="targetIndex: 0">
+
+        <a-entity id="campi" class="clickable" gltf-model="#uno" position="0.32 0.52 0.7" rotation="83.937 92.878 93.887" scale="0.85 0.85 0.85" click-listener1></a-entity>        
+        <a-entity id="che" class="clickable" gltf-model="#dos" position="0.25 0.06 0.7" rotation="83 87.691 88.013" scale="1.3 1.3 1.3 " click-listener2 ></a-entity>
+        <a-entity id="zao" class="clickable" gltf-model="#tres" position="-0.32 0.18 0.7" rotation="81.735 93.704 94.151" scale="1.3 1.3 1.3 " click-listener3></a-entity> 
+        <a-entity id="mesa" class="clickable" gltf-model="#cuatro" position="-0.27 0.6 0.7" rotation="83.937 92.878 93.887" scale="1.3 1.3 1.3 " click-listener4></a-entity>  
+        <a-text value="Toca una zona" position="-0.8  0.8 0.7" ></a-text>
+		
+		
+      </a-entity>
+    </a-scene>
+  </body>
+</html>

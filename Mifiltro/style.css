@@ -1,8 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #cbd1a9;
-  font-family: 'Roboto', sans-serif;
+  background-color: rgb(203, 209, 169);
+  font-family: "Roboto", sans-serif;
 }
 
 #cabeceraLogo {
@@ -21,7 +21,7 @@
   margin: auto;
   padding: 1em;
   border-radius: 25px;
-  color: #b99313;
+  color: rgb(185, 147, 19);
   text-align: center;
   font-size: 2em;
 }
@@ -31,26 +31,18 @@
   width: 80%;
   margin: auto;
   margin-top: 5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   row-gap: 40px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 #parafotos #feten {
   max-width: 100%;
   height: auto;
 }
-
 #parafotos #ns {
   max-width: 100%;
   height: auto;
@@ -74,15 +66,9 @@
   text-align: center;
   margin: auto;
   font-size: 6vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #notafinal {
@@ -92,15 +78,9 @@
   color: #FDFFEF;
   text-align: center;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -128,10 +108,8 @@ a:hover {
   background-color: #313131;
   border-bottom: 1px solid;
   border: 10px;
-  background: -webkit-gradient(linear, left top, right top, from(#A24BE7), color-stop(#2C68A6), color-stop(#7FB029), color-stop(#D2C31E), to(#D92732));
   background: linear-gradient(to right, #A24BE7, #2C68A6, #7FB029, #D2C31E, #D92732);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

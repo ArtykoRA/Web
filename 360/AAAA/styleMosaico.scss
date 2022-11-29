@@ -1,0 +1,62 @@
+$color-fondo: #121212;    
+$color-primario: #bb86fc;
+$color-primario2: #3700b3;
+$color-secundario: #03DAC6;
+
+*{
+    background-color: $color-fondo;
+    margin: 0;
+    padding: 0;
+
+}
+
+.cabecera{
+    opacity: 80%;
+    width: 100%;
+    height: 25vh;
+    margin-bottom: 10vh;
+}
+
+h1{
+    color: $color-secundario;
+    padding: 2em;
+    text-align: center;
+
+
+}
+h4{
+    color:$color-secundario;
+    text-align: center;
+}
+
+#galeria{
+    display: flex;
+    flex-direction: row ;
+    justify-content: center ;
+    flex-wrap: wrap ;
+    
+}
+
+.portafotos{
+    margin: 2em;
+    width: 400px;  
+}
+
+
+img{
+   
+    margin: auto;
+    display: block;
+    width: 80%;
+} 
+
+img:hover{
+    width: 100%;
+}
+
+p{
+    color: $color-secundario;
+    text-align: center;
+    margin: 0.5em;
+}
+
